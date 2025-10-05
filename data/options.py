@@ -74,8 +74,8 @@ def option():
     parser.add_argument('--lolv2_real', type=bool, default=False)
     parser.add_argument('--lolv2_syn', type=bool, default=False)
     parser.add_argument('--lol_blur', type=bool, default=False)
-    parser.add_argument('--SID', type=bool, default=True)
-    parser.add_argument('--SICE_mix', type=bool, default=False)
+    parser.add_argument('--SID', type=bool, default=False)
+    parser.add_argument('--SICE_mix', type=bool, default=True)
     parser.add_argument('--SICE_grad', type=bool, default=False)
     parser.add_argument('--fivek', type=bool, default=False)
     return parser
