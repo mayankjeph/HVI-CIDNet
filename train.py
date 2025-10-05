@@ -126,11 +126,11 @@ def load_datasets():
             test_set = get_eval_set(opt.data_val_lolv2_syn)
             testing_data_loader = DataLoader(dataset=test_set, num_workers=opt.threads, batch_size=1, shuffle=False)
         
-        if opt.SID ==True:
+        if opt.SID:
             train_set = get_SID_training_set(opt.data_train_SID,size=opt.cropSize)
             training_data_loader = DataLoader(dataset=train_set, num_workers=opt.threads, batch_size=opt.batchSize, shuffle=opt.shuffle)
             test_set = get_eval_set(opt.data_val_SID)
-            testing_data_loader = DataLoader(dataset=test_set, num_workers=opt.threads, batch_size=1, shuffle=True)
+            testing_data_loader = DataLoader(dataset=test_set, num_workers=opt.threads, batch_size=1, shuffle=False)
             
         if opt.SICE_mix:
             train_set = get_SICE_training_set(opt.data_train_SICE,size=opt.cropSize)
